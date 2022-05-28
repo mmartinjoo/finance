@@ -12,6 +12,11 @@ class Company extends Model
 
     protected $guarded = [];
 
+    public function metrics(): HasMany
+    {
+        return $this->hasMany(Metric::class);
+    }
+
     public function income_statements(): HasMany
     {
         return $this->hasMany(IncomeStatement::class);

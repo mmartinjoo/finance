@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('year');
             $table->float('gross_margin', 5, 2);
             $table->float('operating_margin', 5, 2);
-            $table->float('net_margin', 5, 2);
+            $table->float('profit_margin', 5, 2);
             $table->float('pe_ratio', 6, 2);
             $table->timestamps();
         });
