@@ -4,16 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Company extends Model
+class IncomeStatement extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function income_statements(): HasMany
+    public function company(): BelongsTo
     {
-        return $this->hasMany(IncomeStatement::class);
+        return $this->belongsTo(Company::class);
     }
 }

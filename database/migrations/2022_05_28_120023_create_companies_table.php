@@ -12,8 +12,8 @@ return new class extends Migration
             $table->id();
             $table->string('ticker', 6)->nullable(false)->unique();
             $table->string('name');
-            $table->float('price_per_share');
-            $table->float('market_cap');
+            $table->integer('price_per_share');
+            $table->integer('market_cap');
             $table->timestamps();
         });
     }
