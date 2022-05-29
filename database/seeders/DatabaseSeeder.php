@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'ticker' => 'AAPL',
             'name' => 'Apple Inc.',
             'price_per_share' => 149.64 * 100,
-            'market_cap' => 242000000,
+            'market_cap' => 2420000,
         ]);
 
         IncomeStatement::create([
@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             'ticker' => 'MSFT',
             'name' => 'Microsoft Inc.',
             'price_per_share' => 273.24 * 100,
-            'market_cap' => 204000000,
+            'market_cap' => 2040000,
         ]);
 
         IncomeStatement::create([
