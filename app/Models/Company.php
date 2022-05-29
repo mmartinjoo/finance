@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Casts\FinancialValueCast;
+use App\Models\Casts\MarketCapCast;
 use App\Models\Casts\PriceCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,7 +16,7 @@ class Company extends Model
 
     protected $casts = [
         'price_per_share' => PriceCast::class,
-        'market_cap' => FinancialValueCast::class,
+        'market_cap' => MarketCapCast::class,
     ];
 
     public function metrics(): HasMany
