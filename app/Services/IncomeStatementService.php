@@ -19,7 +19,7 @@ class IncomeStatementService
                     continue;
                 }
 
-                Arr::set($data, "{$attribute}.{$incomeStatement->year}", $value);
+                Arr::set($data, "{$attribute}.{$incomeStatement->year}", $incomeStatement->{$attribute});
             }
         }
 
