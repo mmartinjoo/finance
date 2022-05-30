@@ -4,13 +4,13 @@ namespace App\ValueObjects;
 
 class FinancialValue
 {
-    public readonly int $raw;
+    public readonly int $value;
     public readonly int $millions;
     public readonly string $formatted;
 
     public function __construct(int $millions)
     {
-        $this->raw = $millions * 1_000_000;
+        $this->value = $millions * 1_000_000;
 
         $this->millions = $millions;
 

@@ -4,14 +4,14 @@ namespace App\ValueObjects;
 
 class Margin
 {
-    public readonly float $raw;
+    public readonly float $value;
     public readonly string $formatted;
     public readonly FinancialValue $top_line;
     public readonly FinancialValue $bottom_line;
 
     public function __construct(float $value, FinancialValue $topLine, FinancialValue $bottomLine)
     {
-        $this->raw = $value;
+        $this->value = $value;
 
         $this->top_line = $topLine;
 
