@@ -5,19 +5,26 @@ namespace App\ValueObjects;
 class MarketCap
 {
     public readonly int $millions;
-    public readonly string $millions_formatted;
-    public readonly string $billions_formatted;
-    public readonly string $trillions_formatted;
+    public readonly string $formatted;
 
     public function __construct(int $millions)
     {
         $this->millions = $millions;
 
-        $this->millions_formatted = number_format($this->millions) . 'M';
+        // Trillions
+        if ($millions >= 1_000_000) {
+            $this->formatted = number_format($this->millions / 1_000_000, 2, '.') . 'T';
+        }
 
-        $this->billions_formatted = number_format($this->millions / 1_000, 1, '.') . 'B';
+        // Billions
+        if ($millions < 1_000_000 && $millions >= 1_000) {
+            $this->formatted = number_format($this->millions / 1_000, 1, '.') . 'B';
+        }
 
-        $this->trillions_formatted = number_format($this->millions / 1_000_000, 2, '.') . 'T';
+        // Millions
+        if ($millions < 1_000) {
+            $this->formatted = number_format($this->millions) . 'M';
+        }
     }
 
     public static function from(int $millions): self
