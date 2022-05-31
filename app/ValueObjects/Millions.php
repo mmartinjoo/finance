@@ -2,7 +2,7 @@
 
 namespace App\ValueObjects;
 
-class FinancialValue
+class Millions
 {
     public readonly int $value;
     public readonly int $millions;

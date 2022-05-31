@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Casts\FinancialValueCast;
+use App\Models\Casts\MillionsCast;
 use App\Models\Casts\PriceCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -15,14 +15,14 @@ class IncomeStatement extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'revenue' => FinancialValueCast::class,
-        'cost_of_revenue' => FinancialValueCast::class,
-        'gross_profit' => FinancialValueCast::class,
-        'operating_expenses' => FinancialValueCast::class,
-        'operating_profit' => FinancialValueCast::class,
-        'interest_expense' => FinancialValueCast::class,
-        'income_tax_expense' => FinancialValueCast::class,
-        'net_income' => FinancialValueCast::class,
+        'revenue' => MillionsCast::class,
+        'cost_of_revenue' => MillionsCast::class,
+        'gross_profit' => MillionsCast::class,
+        'operating_expenses' => MillionsCast::class,
+        'operating_profit' => MillionsCast::class,
+        'interest_expense' => MillionsCast::class,
+        'income_tax_expense' => MillionsCast::class,
+        'net_income' => MillionsCast::class,
         'eps' => PriceCast::class,
     ];
 

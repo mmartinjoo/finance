@@ -6,10 +6,10 @@ class Margin
 {
     public readonly float $value;
     public readonly string $formatted;
-    public readonly FinancialValue $top_line;
-    public readonly FinancialValue $bottom_line;
+    public readonly Millions $top_line;
+    public readonly Millions $bottom_line;
 
-    public function __construct(float $value, FinancialValue $topLine, FinancialValue $bottomLine)
+    public function __construct(float $value, Millions $topLine, Millions $bottomLine)
     {
         $this->value = $value;
 
@@ -20,7 +20,7 @@ class Margin
         $this->formatted = number_format($value * 100, 2, '.') . '%';
     }
 
-    public static function from(float $value, FinancialValue $topLine, FinancialValue $bottomLine): self
+    public static function from(float $value, Millions $topLine, Millions $bottomLine): self
     {
         return new self($value, $topLine, $bottomLine);
     }
