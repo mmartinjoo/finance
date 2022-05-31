@@ -20,7 +20,7 @@ class Margin
         $this->formatted = number_format($value * 100, 2, '.') . '%';
     }
 
-    public static function from(float $value, Millions $topLine, Millions $bottomLine): self
+    public static function make(float $value, Millions $topLine, Millions $bottomLine): self
     {
         return new self($value, $topLine, $bottomLine);
     }

@@ -13,7 +13,7 @@ class MarginCast implements CastsAttributes
 
         [$topLine, $bottomLine] = $model->getTopAndBottomLine($incomeStatement, $key);
 
-        return Margin::from($value, $topLine, $bottomLine);
+        return Margin::make($value, $topLine, $bottomLine);
     }
 
     public function set($model, string $key, $value, array $attributes)
