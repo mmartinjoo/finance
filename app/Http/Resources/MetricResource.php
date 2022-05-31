@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use App\Services\MetricService;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CompanyMetricResource extends JsonResource
+class MetricResource extends JsonResource
 {
     public $preserveKeys = true;
 
